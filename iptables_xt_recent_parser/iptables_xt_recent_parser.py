@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python
 
 #~ Copyright 2017 Giuseppe De Marco <giuseppe.demarco@unical.it>
 #~ 
