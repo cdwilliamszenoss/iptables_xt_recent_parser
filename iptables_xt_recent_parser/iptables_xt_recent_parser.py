@@ -28,8 +28,11 @@ import os
 import subprocess
 
 _debug = False
-_fpath = '/proc/net/xt_recent/DEFAULT'
-_kernel_config_path = '/boot/config-'+subprocess.getoutput(['uname -r']) 
+_fpath = '/proc/net/xt_recent/BLACKLIST'
+
+# Modify to work with python 2.7.x
+_kernel_config_path = '/boot/config-'+subprocess.check_output(['uname', '-r']).strip()
+
 _datetime_format = '%Y-%m-%d %H:%M:%S'
 
 
@@ -279,7 +282,7 @@ if __name__ == '__main__':
     # An int is an explicit number of arguments to accept.
     parser.add_argument('-f', required=False,
                         default=_fpath,
-                        help="custom xt_recent path, default if omitted is: /proc/net/xt_recent/DEFAULT")
+                        help="custom xt_recent path, default if omitted is: /proc/net/xt_recent/BLACKLIST")
     parser.add_argument('-txt', action="store_true", help="print it in human readable format")
     parser.add_argument('-csv', action="store_true", help="print it in CSV format")
     args = parser.parse_args()
