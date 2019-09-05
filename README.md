@@ -1,4 +1,8 @@
 # xt_recent_parser
+
+Modified to run on python2.
+Will use the /proc/net/xt_recent/BLACKLIST to read blocked IP addresses.
+
 Tool used for converting jiffies from iptables xt_recent into timestamps.
 
 An example of xt_recent log can be like this, where only 2 syn connections in 20 seconds are allowed:
