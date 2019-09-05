@@ -1,7 +1,13 @@
 # xt_recent_parser
 
-Modified to run on python2.
-Will use the /proc/net/xt_recent/BLACKLIST to read blocked IP addresses.
+Modified to run on Python2.
+
+Will use the /proc/net/xt_recent/BLACKLIST to read dynamically blocked IP addresses.
+
+Reference repo for more info:
+
+https://github.com/cdwilliamszenoss/BASH-IPTables_scripts/blob/master/iptables-dynamic-block-updated
+
 
 Tool used for converting jiffies from iptables xt_recent into timestamps.
 
